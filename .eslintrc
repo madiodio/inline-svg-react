@@ -1,0 +1,54 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "jsx-a11y", "import"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb"],
+  "settings": {},
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "globals": {},
+  "rules": {
+    "comma-dangle": [0, "never"],
+    "experimentalDecorators": 0,
+    "global-require": 0,
+    "import/first": 0,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "linebreak-style": ["error", "windows"],
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": [
+      2,
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "jsx-a11y/alt-text": 0,
+    "jsx-a11y/img-has-alt": 0,
+    "object-curly-spacing": "off",
+    "quotes": 1,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/no-danger": 0,
+    "react/no-unescaped-entities": 0,
+    "react/prefer-stateless-function": 1,
+    "react/prop-types": 0,
+    "space-infix-ops": 1,
+    "semi": 0,
+    "strict": 0
+  }
+}

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: InlineSVG should match with the specified content (children)  1`] = `
+<span
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg
+      role=\\"img\\"
+      aria-labelledby=\\"svg-bh7jz\\"
+      width=\\"20\\"
+      height=\\"20\\"
+    ><title id=\\"svg-bh7jz\\">Icon - home - house</title><path d=\\"M13 23h7V8L10 .631 0 8v15h7v-7h6v7z\\"/></svg>",
+    }
+  }
+/>
+`;
