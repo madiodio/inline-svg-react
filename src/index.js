@@ -5,29 +5,28 @@ const randomID = `svg-${Math.random()
   .toString(36)
   .substr(2, 5)}`;
 
-const SVG = ({ icon, size, label, ...rest }) => {
-  const isA11y = label ? `<title id="${randomID}">Icon - ${label}</title` : null;
+const InlineSVG = ({ icon, size, label, ...rest }) => {
+  const a11yTitle = `<title id="${randomID}">Icon - ${label}</title`;
+  const width = size ? `width="${size}"` : null;
+  const height = size ? `height="${size}"` : null;
+  const labelledBy = label ? `aria-labelledby="${label}"` : null;
+
   const comp = icon.replace(
     /<svg[^>]*/g,
-    `<svg
-      role="img"
-      aria-labelledby="${label ? randomID : null}"
-      width="${size}"
-      height="${size}"
-    >${isA11y}`
+    `<svg role="img" ${labelledBy} ${width} ${height}>${a11yTitle}`
   );
 
   return <span {...rest} dangerouslySetInnerHTML={{ __html: comp }} />;
 };
 
-SVG.propTypes = {
+InlineSVG.propTypes = {
   icon: string.isRequired,
   size: number.isRequired,
   label: string
 };
 
-SVG.defaultProps = {
+InlineSVG.defaultProps = {
   label: ''
 };
 
-export default SVG;
+export default InlineSVG;
