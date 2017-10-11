@@ -1,4 +1,5 @@
 yarn-error.log
+release-it-gh-token
 /node_modules/
 /dist/
 /es/
