@@ -34,7 +34,9 @@ export default () => (
 ...Will output
 
 ```html
-<svg role="img"><title></title><path d="M13 23h7V8L10 .631 0 8v15h7v-7h6v7z"/></svg>
+<span>
+  <svg role="img"><title></title><path d="M13 23h7V8L10 .631 0 8v15h7v-7h6v7z"/></svg>
+</span>
 ```
 
 # Using Webpack to `require()` SVGs
@@ -90,7 +92,7 @@ Your raw SVG element.
 
 ``PropTypes.number``
 
-Inline-svg-react can adds width and height to your SVG element to keeps its styling consistent.
+Inline-svg-react can adds width and height to your wrapper element to keeps its styling consistent.
 
 ### label (Optional)
 
@@ -104,7 +106,7 @@ The name of your SVG element/file. It will inject in the SVG element this:
 
 ### ...rest
 
-Everything else you would like pass to your SVG element like ``style``, etc...
+Everything else you would like pass to the wrapper element like ``style``, ``className``, etc...
 
 ---
 

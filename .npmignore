@@ -2,5 +2,7 @@
 .release-it.json
 gh-token
 yarn-error.log
+yarn.lock
+/__tests__/
 .release-it.json
 /node_modules/
