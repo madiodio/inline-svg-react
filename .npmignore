@@ -1,5 +1,6 @@
 .gitignore
-release-it-gh-token
+.release-it.json
+gh-token
 yarn-error.log
 .release-it.json
 /node_modules/
