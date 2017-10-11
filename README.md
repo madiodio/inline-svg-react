@@ -3,7 +3,7 @@
 > Inline your raw svg files with react with a little bit of accessibility
 
 The component will inline your raw SVG file in react with a little bit of accessibility. There are various 
-solutions that exist but I did this for the main purpose of my needs as I found this simpler. Plus it adds a little bit of accessibilty to the SVG elmenent. See [this post](https://css-tricks.com/accessible-svgs/) for further detail about SVG accessibility.
+solutions that exist but I did this for the main purpose of my needs as I found this simpler. Plus it adds a little bit of accessibilty to the SVG elmenent. See [this post](https://css-tricks.com/accessible-svgs/#article-header-id-6) for further detail about SVG accessibility.
 
 ## Install
 
@@ -30,6 +30,11 @@ export default () => (
     <InlineSVG icon={Icon} label="home" />
   </div>
 )
+```
+...Will output
+
+```html
+<svg role="img"><title></title><path d="M13 23h7V8L10 .631 0 8v15h7v-7h6v7z"/></svg>
 ```
 
 # Using Webpack to `require()` SVGs
@@ -91,7 +96,7 @@ Inline-svg-react can adds width and height to your SVG element to keeps its styl
 
 ``PropTypes.string``
 
-The name of your SVG element/file. It will print inside the SVG this:
+The name of your SVG element/file. It will inject in the SVG element this:
 
 ```html
 <title id="svg-arn5g">Icon - NameOfYourSVGElement</title>

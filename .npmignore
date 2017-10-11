@@ -1,5 +1,3 @@
 .gitignore
 yarn-error.log
 /node_modules/
-/test/
-/src/forked.js

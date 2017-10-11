@@ -2,6 +2,4 @@ yarn-error.log
 /node_modules/
 /dist/
 /es/
-*.map
 /lib/
-/src/forked.js
