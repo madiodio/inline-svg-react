@@ -1,6 +1,6 @@
 {
   "name": "inline-svg-react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Inline your raw svg files with react with a little bit of accessibility",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
