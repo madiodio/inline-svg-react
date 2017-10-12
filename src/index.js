@@ -12,8 +12,8 @@ const InlineSVG = ({ icon, size, label, ...rest }) => {
   const labelledBy = label ? `aria-labelledby="${randomID}"` : '';
 
   const comp = icon.replace(
-    /<svg[^>]*/g,
-    `<svg role="img" ${labelledBy} ${width} ${height}>${a11yTitle}`
+    /<svg([^>]*)/g,
+    `<svg role="img" ${labelledBy} ${width} ${height} $1>${a11yTitle}`
   );
 
   return <span {...rest} dangerouslySetInnerHTML={{ __html: comp }} />;
