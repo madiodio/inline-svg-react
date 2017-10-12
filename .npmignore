@@ -3,6 +3,7 @@
 gh-token
 yarn-error.log
 yarn.lock
-/__tests__/
+/.vscode/
+src/__tests__/
 .release-it.json
 /node_modules/
