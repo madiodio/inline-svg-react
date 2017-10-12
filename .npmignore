@@ -1,9 +1,4 @@
 .gitignore
-.release-it.json
-gh-token
 yarn-error.log
-yarn.lock
 /.vscode/
-src/__tests__/
-.release-it.json
 /node_modules/
