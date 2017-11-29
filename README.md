@@ -3,7 +3,7 @@
 > Inline your raw svg files with react with a little bit of accessibility
 
 The component will inline your raw SVG file in react with a little bit of accessibility. There are various 
-solutions that exist but I did this for the main purpose of my needs as I found this simpler. Plus it adds a little bit of accessibilty to the SVG elmenent. See [this post](https://css-tricks.com/accessible-svgs/#article-header-id-6) for further detail about SVG accessibility.
+solutions that exist but I did this for the main purpose of my needs as I found this simpler. Plus it adds a little bit of accessibilty to the SVG elmenent. See [this post](https://css-tricks.com/accessible-svgs/#article-header-id-6) for further details about SVG accessibility when inlined.
 
 ## Install
 
@@ -13,7 +13,7 @@ $ npm install inline-svg-react
 $ yarn add inline-svg-react
 ```
 
-Note: You need [raw-loader](https://github.com/webpack-contrib/raw-loader) eg. `npm install raw-loader` if you want to use this with webpack.
+Note: You need [raw-loader](https://github.com/webpack-contrib/raw-loader) eg. `npm install raw-loader` if you want to [use this with webpack to require your svg files](#usage-with-webpack).
 
 ## Usage
 
@@ -27,7 +27,7 @@ const Icon = '<svg><path d="M13 23h7V8L10 .631 0 8v15h7v-7h6v7z"/></svg>'
 
 export default () => (
   <div>
-    <InlineSVG icon={Icon} label="home" />
+    <InlineSVG icon={Icon} label="Home" />
   </div>
 )
 ```
@@ -35,13 +35,13 @@ export default () => (
 
 ```html
 <span>
-  <svg role="img"><title></title><path d="M13 23h7V8L10 .631 0 8v15h7v-7h6v7z"/></svg>
+  <svg role="img"><title id="svg-byng2">Icon - Home</title><path d="M13 23h7V8L10 .631 0 8v15h7v-7h6v7z"/></svg>
 </span>
 ```
 
-# Using Webpack to `require()` SVGs
+# Usage with Webpack
 
-Using [raw-loader](https://github.com/webpack-contrib/raw-loader) to require() your SVGs files.
+Using [raw-loader](https://github.com/webpack-contrib/raw-loader) to require() your SVG files.
 
 ```js
 module.exports = {
@@ -53,7 +53,7 @@ module.exports = {
   ]
 }
 
-// With svgo-loader to strip unneeded `svg` attributes:
+// With svgo-loader to optimize your svg files:
 
 module.exports = {
   loaders: [
