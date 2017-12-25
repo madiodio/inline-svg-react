@@ -1,6 +1,6 @@
 {
   "name": "inline-svg-react",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Inline your raw svg files with react with a little bit of accessibility",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
@@ -28,7 +28,7 @@
     "prepublish": "npm run build"
   },
   "peerDependencies": {
-    "webpack": "^1.12.14 || ^3.7.0"
+    "react": "^0.14.9 || ^15.3.0 || ^16.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -52,7 +52,6 @@
     "react-dom": "^16.0.0",
     "react-test-renderer": "^16.0.0",
     "rimraf": "^2.6.1",
-    "webpack": "^1.12.14"
   },
   "dependencies": {
     "prop-types": "^15.5.0"
