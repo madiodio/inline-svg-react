@@ -1,6 +1,6 @@
 {
   "name": "inline-svg-react",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Inline your raw svg files with react with a little bit of accessibility",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
@@ -8,7 +8,13 @@
     "type": "git",
     "url": "git@github.com:madiodio/inline-svg-react.git"
   },
-  "keywords": ["svg", "react", "inline", "accessibility", "a11y"],
+  "keywords": [
+    "svg",
+    "react",
+    "inline",
+    "accessibility",
+    "a11y"
+  ],
   "bugs": {
     "url": "https://github.com/madiodio/inline-svg-react/issues"
   },
