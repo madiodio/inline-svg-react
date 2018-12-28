@@ -27,19 +27,20 @@
     "test:coverage": "jest --coverage",
     "clean": "rimraf ./lib",
     "prebuild": "npm run clean",
-    "build": "gulp",
-    "prepublish": "npm run build"
+    "build": "babel src -d lib"
   },
   "peerDependencies": {
     "react": "^0.14.9 || ^15.3.0 || ^16.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^7.2.3",
-    "babel-jest": "^21.2.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-2": "^6.24.1",
+    "babel-jest": "^23.6.0",
     "enzyme": "^3.0.0",
     "enzyme-to-json": "^3.0.0",
     "eslint": "^3.19.0",
@@ -47,8 +48,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
-    "gulp": "3.9.1",
-    "gulp-babel": "6.1.2",
     "jest": "^21.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

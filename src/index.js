@@ -1,23 +1,31 @@
-import React from 'react';
-import { bool, string, number } from 'prop-types';
+import React from "react";
+import { bool, string, number } from "prop-types";
 
-const randomID = `svg-${Math.random()
-  .toString(36)
-  .substr(2, 5)}`;
+let getLabelID = (label, size, isTest) =>
+  isTest
+    ? "id0"
+    : `${label
+        .toString()
+        .toLowerCase()
+        .split(" ")
+        .join("-")}--${size || 0}`;
 
-const InlineSVG = ({ icon, size, label, isTest, ...rest }) => {
-  const titleID = isTest ? 'id0' : randomID;
-  const a11yTitle = label ? `<title id=${titleID}>Icon - ${label}</title` : '<title></title';
-  const width = size ? `width="${size}"` : '';
-  const height = size ? `height="${size}"` : '';
-  const labelledBy = label ? `aria-labelledby="${titleID}"` : '';
+const InlineSVG = ({ icon, size, label, isTest = false, ...rest }) => {
+  let labelID = label || "";
+  let titleID = labelID && getLabelID(labelID, size, isTest);
+  let width = size ? `width="${size}"` : "";
+  let height = size ? `height="${size}"` : "";
+
+  const a11yTitleTag = label
+    ? `<title id=${titleID}>Icon - ${label}</title`
+    : "<title></title";
 
   const comp = icon.replace(
     /<svg([^>]*)/g,
-    `<svg role="img" ${labelledBy} ${width} ${height} $1>${a11yTitle}`
+    `<svg role="img" ${width} ${height} aria-labelledby="${titleID}" $1>${a11yTitleTag}`
   );
 
-  return <span {...rest} dangerouslySetInnerHTML={{ __html: comp }} />;
+  return <span dangerouslySetInnerHTML={{ __html: comp }} {...rest} />;
 };
 
 InlineSVG.propTypes = {
@@ -29,7 +37,7 @@ InlineSVG.propTypes = {
 
 InlineSVG.defaultProps = {
   size: null,
-  label: '',
+  label: "",
   isTest: false
 };
 
